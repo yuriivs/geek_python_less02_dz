@@ -5,7 +5,15 @@
 
 # mylist = [2, 8, 43, 15, 907, 33, "inter", 32, "bayer"]
 
-mylist = list(input("Введите любое количество чисел через запятую >>>"))
+# mylist = list(input("Введите любое количество чисел через запятую >>>"))
+#
+# mylist.reverse()
+# print("Я поменял местами соседние элементы:", mylist)
 
-mylist.reverse()
-print("Я поменял местами соседние элементы:", mylist)
+
+mylist = input("Введите любое количество чисел через запятую >>>").split(",")
+count = len(mylist) - 1
+for idx in range(0, count, 2):
+    idx_plus = idx + 1
+    mylist[idx], mylist[idx_plus] = mylist[idx_plus], mylist[idx]
+print(mylist)
