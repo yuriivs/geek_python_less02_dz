@@ -4,4 +4,4 @@
 string = list(input("Введите строку из нескольких слов, разделенных пробелами >>>").split())
 
 for ind, el in enumerate(string):
-    print(ind, el[0:10])
+    print(ind+1, el[0:10])
